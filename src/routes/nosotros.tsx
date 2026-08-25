@@ -3,20 +3,17 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
     meta: [
-      { title: "Nosotros — Corporación Educacional San Joaquín" },
+      { title: "Nosotros — Mar y Brasa · Concepción" },
       {
         name: "description",
         content:
-          "Conoce la misión y la comunidad de la Corporación Educacional San Joaquín, colegio del Valle Biobío en Nonguén, Concepción.",
+          "Conoce la historia de Mar y Brasa, restaurant de mariscos y parrilla a leña en el centro de Concepción.",
       },
-      {
-        property: "og:title",
-        content: "Nosotros — Corporación Educacional San Joaquín",
-      },
+      { property: "og:title", content: "Nosotros — Mar y Brasa · Concepción" },
       {
         property: "og:description",
         content:
-          "Conoce la misión y la comunidad del colegio San Joaquín en Nonguén, Concepción.",
+          "Cocina de autor a la leña en Concepción. Historia y filosofía de Mar y Brasa.",
       },
     ],
     links: [{ rel: "canonical", href: "/nosotros" }],
@@ -29,21 +26,20 @@ function Nosotros() {
     <div className="mx-auto max-w-4xl px-4 py-14">
       <span className="text-sm font-600 uppercase tracking-wide text-accent">Nosotros</span>
       <h1 className="mt-2 text-4xl font-600 text-foreground sm:text-5xl">
-        Formando desde el corazón del Valle Biobío
+        Brasas que cuentan historias del mar
       </h1>
       <p className="mt-5 text-lg text-muted-foreground">
-        La Corporación Educacional San Joaquín es un centro educativo de
-        Nonguén, Concepción, que ha acompañado a las familias de la zona por
-        más de una década. Combinamos calidez humana, cercanía con cada
-        estudiante y una formación integral que prepara a niños y niñas para
-        crecer con valores.
+        Mar y Brasa nació en 2014 como una fonda de mariscos frente al mar de
+        Talcahuano. Hoy es un restaurant en el centro de Concepción que mantiene
+        viva esa misma llama: cocinar el producto del día sobre brasas de espino,
+        con respeto por el oficio y calidez de mesa.
       </p>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-3">
         {[
-          { t: "Misión", d: "Ofrecer una educación cercana y de calidad, donde cada estudiante se sienta parte de una familia escolar que lo apoya y lo impulsa a dar lo mejor de sí." },
-          { t: "Visión", d: "Ser un colegio reconocido en el Valle Biobío por su calidez, su sentido de comunidad y el cariño con que acompaña a sus estudiantes y apoderados." },
-          { t: "Valores", d: "Respeto, responsabilidad, compañerismo y cariño. Creemos que aprender es también crecer como persona, dentro y fuera de la sala de clases." },
+          { t: "Nuestra cocina", d: "Brasas de leña de espino, pescados y mariscos frescos del día, y vegetales de productores del valle del Itata. Sin atajos." },
+          { t: "El producto", d: "Compramos cada mañana en las caletas de Talcahuano y Lenga. Lo que hay en la carta depende de lo que trajo el mar." },
+          { t: "El equipo", d: "Un equipo pequeño y constante, dirigido por su chef fundador. Cocina honesta, hecha con manos que conocen cada plato." },
         ].map((b) => (
           <div key={b.t} className="rounded-2xl border border-border bg-card p-6">
             <h2 className="text-xl font-600 text-primary">{b.t}</h2>
@@ -53,19 +49,20 @@ function Nosotros() {
       </div>
 
       <div className="mt-14 rounded-3xl border border-border bg-secondary/40 p-8">
-        <h2 className="text-2xl font-600 text-foreground">Una comunidad que cuida su colegio</h2>
+        <h2 className="text-2xl font-600 text-foreground">Una mesa frente al fuego</h2>
         <p className="mt-4 text-base text-muted-foreground">
-          Generaciones de estudiantes han pasado por nuestras aulas y muchos
-          vuelven con nostalgia, recordando a sus profesores y a sus
-          compañeros. Esa cercanía es lo que nos define: un colegio donde se
-          aprende, pero sobre todo donde se vive comunidad.
+          Nuestras mesas miran a la parrilla a leña. Queremos que quienes nos
+          visiten vivan la cocina: el crujido de las brasas, el humo justo sobre
+          el congrio y el olor a mar que trae cada proveedor al amanecer. Por eso
+          decimos que en Mar y Brasa se come lo que el día trajo, cocinado como se
+          debe.
         </p>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {[
-            "Atención cercana entre profesores, estudiantes y apoderados",
-            "Formación integral con énfasis en valores y compañerismo",
-            "Ubicación accesible en Nonguén, Concepción",
-            "Horario extendido para acompañar a las familias",
+            "Mariscos y pescados frescos comprados cada mañana",
+            "Parrilla a leña de espino, sin gas ni eléctrica",
+            "Carta de vinos del Itata y BIO-BIO",
+            "Reservas para grupos y eventos privados",
           ].map((li) => (
             <li key={li} className="flex items-start gap-3 text-sm text-foreground">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0">

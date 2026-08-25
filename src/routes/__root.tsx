@@ -16,9 +16,10 @@ import logo from "../assets/logo.png";
 const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/nosotros", label: "Nosotros" },
+  { to: "/carta", label: "Carta" },
   { to: "/resenas", label: "Reseñas" },
   { to: "/ubicacion", label: "Ubicación" },
-  { to: "/contacto", label: "Contacto" },
+  { to: "/contacto", label: "Reservas" },
 ] as const;
 
 function NotFoundComponent() {
@@ -88,21 +89,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Corporación Educacional San Joaquín | Concepción, Bío Bío" },
+      { title: "Mar y Brasa · Cocina de autor | Concepción, Bío Bío" },
       {
         name: "description",
         content:
-          "Corporación Educacional San Joaquín, centro educativo en Nonguén, Concepción. Calle Central 17, Valle Biobío. Teléfono (41) 249 9300.",
+          "Mar y Brasa, restaurant de mariscos y parrilla a leña en el centro de Concepción. O'Higgins 245. Teléfono (41) 233 4400. Reservas abiertas.",
       },
-      { name: "author", content: "Corporación Educacional San Joaquín" },
+      { name: "author", content: "Mar y Brasa" },
       {
         property: "og:title",
-        content: "Corporación Educacional San Joaquín | Concepción, Bío Bío",
+        content: "Mar y Brasa · Cocina de autor | Concepción, Bío Bío",
       },
       {
         property: "og:description",
         content:
-          "Centro educativo en Nonguén, Concepción. Calle Central 17, Valle Biobío. Teléfono (41) 249 9300.",
+          "Mariscos frescos y parrilla a leña en el corazón de Concepción. O'Higgins 245. Teléfono (41) 233 4400.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_CL" },
@@ -151,14 +152,14 @@ function Header() {
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
             src={logo}
-            alt="Escudo Corporación Educacional San Joaquín"
+            alt="Logo Mar y Brasa"
             width={40}
             height={40}
             className="h-10 w-10 rounded-full object-cover"
           />
           <div className="leading-tight">
             <span className="block font-display text-base font-600 text-foreground">
-              San Joaquín
+              Mar y Brasa
             </span>
             <span className="block text-xs text-muted-foreground">
               Concepción · Bío Bío
@@ -178,10 +179,10 @@ function Header() {
             </Link>
           ))}
           <a
-            href="tel:+56412499300"
+            href="tel:+56412334400"
             className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Llamar
+            Reservar
           </a>
         </nav>
 
@@ -222,10 +223,10 @@ function Header() {
               </Link>
             ))}
             <a
-              href="tel:+56412499300"
+              href="tel:+56412334400"
               className="mt-1 inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground"
             >
-              Llamar al (41) 249 9300
+              Reservar al (41) 233 4400
             </a>
           </div>
         </nav>
@@ -249,25 +250,25 @@ function Footer() {
               className="h-9 w-9 rounded-full object-cover"
             />
             <span className="font-display text-base font-600 text-foreground">
-              Corporación Educacional San Joaquín
+              Mar y Brasa
             </span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
-            Centro educativo en Nonguén, Concepción. Formando estudiantes desde
-            el corazón del Valle Biobío.
+            Cocina de autor con mariscos frescos y parrilla a leña en el corazón
+            de Concepción.
           </p>
         </div>
         <div>
           <h3 className="font-display text-sm font-600 text-foreground">Contacto</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li>Calle Central 17, Valle Biobío</li>
-            <li>Nonguén, 4050298 Concepción</li>
+            <li>O'Higgins 245, Centro</li>
+            <li>Concepción, Región del Bío Bío</li>
             <li>
-              <a href="tel:+56412499300" className="hover:text-foreground">
-                (41) 249 9300
+              <a href="tel:+56412334400" className="hover:text-foreground">
+                (41) 233 4400
               </a>
             </li>
-            <li>Abierto · Cierra 18:30</li>
+            <li>Mar–Sáb 13:00–23:30 · Dom 13:00–17:00</li>
           </ul>
         </div>
         <div>
@@ -284,7 +285,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Corporación Educacional San Joaquín · Concepción, Región del Bío Bío
+        © {new Date().getFullYear()} Mar y Brasa · Concepción, Región del Bío Bío
       </div>
     </footer>
   );

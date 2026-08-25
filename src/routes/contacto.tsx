@@ -4,20 +4,16 @@ import { useState } from "react";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Corporación Educacional San Joaquín" },
+      { title: "Reservas — Mar y Brasa · Concepción" },
       {
         name: "description",
         content:
-          "Contacta a la Corporación Educacional San Joaquín. Calle Central 17, Nonguén, Concepción. Teléfono (41) 249 9300.",
+          "Reserva tu mesa en Mar y Brasa. O'Higgins 245, Concepción. Teléfono (41) 233 4400.",
       },
-      {
-        property: "og:title",
-        content: "Contacto — Corporación Educacional San Joaquín",
-      },
+      { property: "og:title", content: "Reservas — Mar y Brasa · Concepción" },
       {
         property: "og:description",
-        content:
-          "Teléfono (41) 249 9300 · Calle Central 17, Nonguén, Concepción.",
+        content: "Reserva mesa o evento en Mar y Brasa, Concepción. (41) 233 4400.",
       },
     ],
     links: [{ rel: "canonical", href: "/contacto" }],
@@ -29,12 +25,11 @@ function Contacto() {
   const [sent, setSent] = useState(false);
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
-      <span className="text-sm font-600 uppercase tracking-wide text-accent">Contacto</span>
-      <h1 className="mt-2 text-4xl font-600 text-foreground sm:text-5xl">Hablemos</h1>
+      <span className="text-sm font-600 uppercase tracking-wide text-accent">Reservas</span>
+      <h1 className="mt-2 text-4xl font-600 text-foreground sm:text-5xl">Reserva tu mesa</h1>
       <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-        Escríbenos o llámanos. Estaremos felices de responder tus dudas sobre
-        matrículas, horarios y la vida escolar en la Corporación Educacional
-        San Joaquín.
+        Escríbenos para reservar mesa, celebrar un evento o consultarnos por
+        nuestro menú de degustación. Te confirmamos por correo o teléfono.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_360px]">
@@ -47,15 +42,15 @@ function Contacto() {
                   <path d="M20 6L9 17l-5-5" />
                 </svg>
               </div>
-              <h2 className="mt-4 text-xl font-600 text-foreground">¡Mensaje enviado!</h2>
+              <h2 className="mt-4 text-xl font-600 text-foreground">¡Reserva enviada!</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Gracias por escribirnos. Te contactaremos pronto al correo o teléfono indicado.
+                Gracias por escribirnos. Te confirmaremos pronto al correo o teléfono indicado.
               </p>
               <button
                 onClick={() => setSent(false)}
                 className="mt-6 rounded-md border border-input px-4 py-2 text-sm font-600 text-foreground hover:bg-secondary"
               >
-                Enviar otro mensaje
+                Hacer otra reserva
               </button>
             </div>
           ) : (
@@ -71,7 +66,21 @@ function Contacto() {
                   <input id="nombre" required placeholder="Tu nombre" className="input" />
                 </Field>
                 <Field label="Teléfono" id="fono">
-                  <input id="fono" type="tel" placeholder="(41) 2 49 9300" className="input" />
+                  <input id="fono" type="tel" placeholder="(41) 233 4400" className="input" />
+                </Field>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Fecha" id="fecha">
+                  <input id="fecha" type="date" className="input" />
+                </Field>
+                <Field label="Comensales" id="comensales">
+                  <select id="comensales" className="input">
+                    <option>1 persona</option>
+                    <option>2 personas</option>
+                    <option>3–4 personas</option>
+                    <option>5–8 personas</option>
+                    <option>Más de 8 (evento)</option>
+                  </select>
                 </Field>
               </div>
               <Field label="Correo electrónico" id="email">
@@ -79,25 +88,25 @@ function Contacto() {
               </Field>
               <Field label="Asunto" id="asunto">
                 <select id="asunto" className="input">
-                  <option>Matrículas</option>
-                  <option>Información general</option>
-                  <option>Horarios y visita</option>
+                  <option>Reserva de mesa</option>
+                  <option>Evento o grupo grande</option>
+                  <option>Para llevar</option>
                   <option>Otro</option>
                 </select>
               </Field>
               <Field label="Mensaje" id="mensaje">
-                <textarea id="mensaje" required rows={5} placeholder="Cuéntanos en qué podemos ayudarte..." className="input resize-y" />
+                <textarea id="mensaje" rows={5} placeholder="Cuéntanos ocasión, hora deseada y alergias..." className="input resize-y" />
               </Field>
               <button
                 type="submit"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-600 text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                Enviar mensaje
+                Solicitar reserva
               </button>
               <p className="text-xs text-muted-foreground">
                 También puedes llamarnos directamente al{" "}
-                <a href="tel:+56412499300" className="font-600 text-primary hover:text-accent">
-                  (41) 249 9300
+                <a href="tel:+56412334400" className="font-600 text-primary hover:text-accent">
+                  (41) 233 4400
                 </a>
                 .
               </p>
@@ -109,21 +118,21 @@ function Contacto() {
         <div className="space-y-4">
           <div className="rounded-2xl border border-border bg-card p-6">
             <h2 className="text-sm font-600 uppercase tracking-wide text-muted-foreground">Teléfono</h2>
-            <a href="tel:+56412499300" className="mt-2 block text-lg font-600 text-primary hover:text-accent">
-              (41) 249 9300
+            <a href="tel:+56412334400" className="mt-2 block text-lg font-600 text-primary hover:text-accent">
+              (41) 233 4400
             </a>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
             <h2 className="text-sm font-600 uppercase tracking-wide text-muted-foreground">Dirección</h2>
-            <p className="mt-2 text-base text-foreground">Calle Central 17</p>
-            <p className="text-base text-foreground">Valle Biobío, Nonguén</p>
-            <p className="text-base text-foreground">4050298 Concepción</p>
-            <p className="text-base text-foreground">Bío Bío, Chile</p>
+            <p className="mt-2 text-base text-foreground">O'Higgins 245</p>
+            <p className="text-base text-foreground">Centro, Concepción</p>
+            <p className="text-base text-foreground">Región del Bío Bío, Chile</p>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
             <h2 className="text-sm font-600 uppercase tracking-wide text-muted-foreground">Horario</h2>
-            <p className="mt-2 text-base text-foreground">Lun a Vie</p>
-            <p className="text-base text-foreground">Abierto · Cierra 18:30</p>
+            <p className="mt-2 text-base text-foreground">Mar–Sáb · 13:00 a 23:30</p>
+            <p className="text-base text-foreground">Domingo · 13:00 a 17:00</p>
+            <p className="text-base text-muted-foreground">Lunes cerrado</p>
           </div>
         </div>
       </div>
@@ -142,7 +151,7 @@ function Contacto() {
         }
         .input:focus {
           border-color: var(--color-primary);
-          box-shadow: 0 0 0 3px oklch(0.46 0.09 155 / 0.18);
+          box-shadow: 0 0 0 3px oklch(0.38 0.11 25 / 0.18);
         }
       `}</style>
     </div>
