@@ -5,13 +5,6 @@ export default defineConfig({
     server: {
       entry: "server",
     },
-
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-      autoStaticPathsDiscovery: true,
-      autoSubfolderIndex: true,
-    },
   },
 
   vite: {
