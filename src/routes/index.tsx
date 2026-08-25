@@ -98,7 +98,7 @@ function Index() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroImg}
-            alt="Salón de Mar y Brasa con mesa servida y velas"
+            alt="Mesa servida en Mar y Brasa con copas de vino y plato de autor"
             width={1600}
             height={1000}
             className="absolute inset-0 h-full w-full object-cover"
@@ -233,7 +233,7 @@ function Index() {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <blockquote className="rounded-xl border border-border bg-card p-5">
                 <p className="text-sm text-foreground">
-                  “El mejor pulpo a la brasa que he probado en Concepción. Servicio impecable.”
+                  “El mejor salmón a la brasa que he probado en Concepción. Servicio impecable.”
                 </p>
                 <footer className="mt-3 text-xs text-muted-foreground">— Javiera Rojas</footer>
               </blockquote>
