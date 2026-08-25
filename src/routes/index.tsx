@@ -30,9 +30,9 @@ export const Route = createFileRoute("/")({
 });
 
 const SIGNATURE = [
-  { name: "Pulpo a la Brasa", desc: "Tentáculo de pulpo a las brasas, aceite de pimentón ahumado y sal de mar.", price: "$16.900", img: platoPulpo },
-  { name: "Mixta Mar y Brasa", desc: "Parrilla para dos: camarones, congrio, ostiones y longaniza a la leña.", price: "$32.000", img: platoParrilla },
-  { name: "Ceviche del Día", desc: "Pescado fresco del día, limón, cebolla morada, cilantro y camote.", price: "$9.800", img: platoCeviche },
+  { name: "Camarones al Pil-Pil", desc: "Camarones salteados en aceite de oliva, ajo y ají, con pan amasado tostado.", price: "$12.900", img: platoPulpo },
+  { name: "Costillar a la Parrilla", desc: "Costillar de cerdo a la leña con papas fritas rústicas, ensalada chilena y salsa de la casa.", price: "$14.500", img: platoParrilla },
+  { name: "Salmón a la Brasa", desc: "Filete de salmón a las brasas con ensalada de quinoa, palta y tomate cherry.", price: "$15.900", img: platoCeviche },
 ] as const;
 
 const HIGHLIGHTS = [
