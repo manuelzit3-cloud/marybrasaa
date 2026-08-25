@@ -30,27 +30,14 @@ jobs:
       - name: Instalar dependencias
         run: bun install --frozen-lockfile
 
+      - name: Compilar proyecto
+        run: bun run build
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Compilar y prerenderizar
-        run: bun run build
-
-      - name: Comprobar archivos generados
-        run: |
-          echo "Contenido de .output/public:"
-          find .output/public -maxdepth 3 -type f | sort
-
-      - name: Crear index.html si es necesario
-        run: |
-          if [ ! -f ".output/public/index.html" ]; then
-            echo "ERROR: No se encontró index.html"
-            echo "El proyecto necesita prerenderizado estático."
-            exit 1
-          fi
-
       - name: Subir archivos
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
 
