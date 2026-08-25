@@ -30,9 +30,9 @@ export const Route = createFileRoute("/")({
 });
 
 const SIGNATURE = [
-  { name: "Pulpo a la Brasa", desc: "Tentáculo de pulpo a las brasas, aceite de pimentón ahumado y sal de mar.", price: "$16.900", img: platoPulpo },
-  { name: "Mixta Mar y Brasa", desc: "Parrilla para dos: camarones, congrio, ostiones y longaniza a la leña.", price: "$32.000", img: platoParrilla },
-  { name: "Ceviche del Día", desc: "Pescado fresco del día, limón, cebolla morada, cilantro y camote.", price: "$9.800", img: platoCeviche },
+  { name: "Camarones al Pil-Pil", desc: "Camarones salteados en aceite de oliva, ajo y ají, con pan amasado tostado.", price: "$12.900", img: platoPulpo },
+  { name: "Costillar a la Parrilla", desc: "Costillar de cerdo a la leña con papas fritas rústicas, ensalada chilena y salsa de la casa.", price: "$14.500", img: platoParrilla },
+  { name: "Salmón a la Brasa", desc: "Filete de salmón a las brasas con ensalada de quinoa, palta y tomate cherry.", price: "$15.900", img: platoCeviche },
 ] as const;
 
 const HIGHLIGHTS = [
@@ -98,7 +98,7 @@ function Index() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroImg}
-            alt="Salón de Mar y Brasa con mesa servida y velas"
+            alt="Mesa servida en Mar y Brasa con copas de vino y plato de autor"
             width={1600}
             height={1000}
             className="absolute inset-0 h-full w-full object-cover"
@@ -233,7 +233,7 @@ function Index() {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <blockquote className="rounded-xl border border-border bg-card p-5">
                 <p className="text-sm text-foreground">
-                  “El mejor pulpo a la brasa que he probado en Concepción. Servicio impecable.”
+                  “El mejor salmón a la brasa que he probado en Concepción. Servicio impecable.”
                 </p>
                 <footer className="mt-3 text-xs text-muted-foreground">— Javiera Rojas</footer>
               </blockquote>
